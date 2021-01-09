@@ -1,0 +1,14 @@
+
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <h3>Todo List</h3>
+    
+    <div class="example-box" *ngFor="let task of items" cdkDrag>
+        <div>{{task._id}}</div>{{task.label}}
+        <div>
+            <button (click)="deleteUser(task._id)" >Delete</button>
+        </div>
+    </div>
+  </div>
+
+  
